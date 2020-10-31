@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; }
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  background: #353535;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.6);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .nav-header h1 {
+    margin-left: 20px; }
+  .nav-header .txt-primary {
+    color: #f57505; }
+  .nav-user h4 {
+    margin-right: 20px; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #353535;
+  position: relative; }
+  .container .alert {
+    color: #fff;
+    background: rgba(227, 34, 34, 0.9);
+    width: 30%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    transition: transform 0.3s ease-in;
+    margin: 0 auto;
+    transform: translateX(-900px); }
+    .container .alert.active {
+      transform: translateX(0); }
+  .container .modal {
+    width: 320px;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(33, 33, 33, 0.7);
+    border: 1px solid rgba(222, 222, 222, 0.2);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-out;
+    opacity: 0; }
+    .container .modal.show {
+      opacity: 1; }
+    .container .modal h3 {
+      font-size: 24px;
+      margin: 10px 0; }
+      .container .modal h3 .txt-primary {
+        color: #f57505; }
+    .container .modal .userName {
+      margin: 10px 0;
+      font-size: 16px;
+      outline: none;
+      transition: padding 0.3s ease-in; }
+      .container .modal .userName:focus {
+        padding: 7px; }
+    .container .modal .submit {
+      padding: 5px;
+      margin: 10px 0;
+      width: 65%;
+      color: #fff;
+      background: #f57505;
+      outline: none;
+      border: 1px solid rgba(222, 222, 222, 0.9);
+      transition: background 0.3s ease-in;
+      cursor: pointer; }
+      .container .modal .submit:hover {
+        background: rgba(33, 33, 33, 0.9); }
+
+.main-footer {
+  height: 10vh;
+  text-align: center;
+  background: #353535;
+  color: #fff;
+  border-top: 1px solid rgba(222, 222, 222, 0.6);
+  font-size: 16px; }
